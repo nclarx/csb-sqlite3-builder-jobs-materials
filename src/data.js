@@ -34,7 +34,9 @@ db.serialize(() => {
 })
 
 function createCustomerJobsAndMaterials(db) {
+
     return customers.createCustomer(db, customers.createMockCustomer())
+
         .then((customerId) => { // customerId is returned from the database
 
             console.log('A customer record has been created with an id of:', customerId)
@@ -50,6 +52,12 @@ function createCustomerJobsAndMaterials(db) {
                 }) // end of createJob.then()
 
         }) // end of createCustomer.then()
+
+
+
+
+
+
         .catch((err) => {
             console.error('There was an error creating a customer:', err)
         })

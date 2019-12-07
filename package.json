@@ -9,8 +9,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "createdb": "sqlite3 ./db/builder.db < ./sql/create-tables.sql;",
-    "start": "node ./src/data.js",
+    "createdb": "rm ./db/builder.db; touch ./db/builder.db && sqlite3 ./db/builder.db < ./sql/create-tables.sql;",
+    "start": "npm run createdb && node ./src/data.js",
     "sqlite": "sqlite3 ./db/builder.db"
   },
   "keywords": [],

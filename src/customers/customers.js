@@ -27,17 +27,16 @@ function createCustomer(db, customer) {
 
     return new Promise(
         (resolve, reject) => {
-
+            
             db.run(
                 sql,
                 parameters,
-                function (error, result) {
+                function (error) {
                     if (error) {
                         reject(error)
                     }
 
                     resolve(this.lastID)
-
 
                 } // end of callback function
             ) // end of db.run
