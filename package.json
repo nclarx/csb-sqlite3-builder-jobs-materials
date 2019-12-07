@@ -1,0 +1,19 @@
+{
+  "name": "builder-app-sqlite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "data.js",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "createdb": "sqlite3 ./db/builder.db < ./sql/create-tables.sql;",
+    "start": "node ./src/data.js",
+    "sqlite": "sqlite3 ./db/builder.db"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
